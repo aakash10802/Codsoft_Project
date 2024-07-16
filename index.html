@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fyler|| Landing Page</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+    <link rel="icon" type="image" href="https://firebasestorage.googleapis.com/v0/b/project-d0bae.appspot.com/o/favicon.ico?alt=media&token=c5b037b8-0b5a-4fa8-b8e1-ff9da19cd76e" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      scroll-behavior: smooth;
+    }
+    header{
+      background-color: #f12a3a  !important;
+      max-width: 100%;
+      padding: 2vh;
+      font-size: smaller;
+    }
+   header .text-logo{
+        color: #ffffff;
+    }
+    #button{
+      background:  #ffffff;
+      padding: 10px;
+    }
+    #link{
+      font-size: medium;
+      font-weight: 100;
+    }
+    :root {
+      /* text sizes */
+      --xs3-text: 10px;
+      --xs2-text: 12px;
+      --xs-text: 14px;
+      --sm-text: 16px;
+      --md-text: 18px;
+      --lg-text: 20px;
+      --xl-text: 22px;
+      --xl2-text: 24px;
+
+      /* text color */
+      --gray-100: rgb(244, 244, 244);
+      --gray-200: rgb(230, 230, 230);
+      --gray-300: rgb(212, 212, 212);
+      --gray-400: rgb(190, 190, 190);
+      --gray-500: rgb(164, 164, 164);
+      --gray-600: rgb(136, 136, 136);
+      --gray-700: rgb(106, 106, 106);
+      --gray-800: rgb(74, 74, 74);
+      --gray-900: rgb(20, 20, 20);
+
+      --red-100: rgb(255, 138, 138);
+      --red-200: rgb(255, 109, 109);
+      --red-300: rgb(255, 79, 79);
+      --red-400: rgb(255, 30, 30);
+      --red-500: rgb(234, 0, 0);
+      --red-600: rgb(216, 0, 0);
+      --red-700: rgb(198, 0, 0);
+      --red-800: rgb(174, 0, 0);
+      --red-900: rgb(163, 0, 0);
+
+      /* header */
+      --xs2-header: 16px;
+      --xs-header: 18px;
+      --sm-header: 24px;
+      --md-header: 28px;
+      --lg-header: 32px;
+      --xl-header: 36px;
+      --xl2-header: 42px;
+
+      /* height */
+      --height-10: 10vh;
+      --height-20: 20vh;
+      --height-30: 30vh;
+      --height-40: 40vh;
+      --height-50: 50vh;
+      --height-60: 60vh;
+      --height-70: 70vh;
+      --height-80: 80vh;
+      --height-90: 90vh;
+    }
+
+    a {
+      text-decoration: none !important;
+      color: var(--gray-700);
+      font-weight: 700;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+      height: 0;
+    }
+
+    h2 {
+      font-family: "Kanit", sans-serif;
+      color: var(--gray-800);
+      line-height: 34px;
+
+    }
+
+    h4 {
+      font-family: "Nunito", sans-serif;
+      color: var(--red-500);
+      font-weight: 900;
+    }
+
+    p {
+      font-weight: 400;
+      color: var(--gray-800);
+      font-weight: 400;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    button {
+      width: max-content;
+      border: none;
+      /* background-color: var(--red-400); */
+      color: var(--gray-100);
+      padding: 8px 24px;
+      font-weight: 500;
+    }
+
+    /* hero section */
+    .hero-section,
+    .service-section {
+      height: max-content;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .hero-section .col {
+      min-height: 100%;
+    }
+
+    .img-col {
+      padding: 0 !important;
+    }
+
+    .hero-section .col .hero-image {
+      aspect-ratio: 0.7/1;
+      object-fit: cover;
+      height: 50vh;
+      object-position: center;
+    }
+
+    /* service section */
+    .service-section {
+      background-color: var(--gray-100);
+    }
+
+    .service-section p {
+      color: var(--gray-800);
+      font-weight: 400;
+      font-size: var(--xs-text);
+    }
+
+    .service-section .col2 {
+      height: max-content;
+    }
+
+    .service-section .col1 {
+      height: max-content;
+    }
+
+    .service-section .col3 {
+      max-width: 100%;
+      overflow-x: auto;
+      height: max-content;
+      column-gap: 12px;
+    }
+
+    .service-section .col3 li {
+      min-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .service-section .col3 li img {
+      min-width: 100% !important;
+      width: 100% !important;
+      aspect-ratio: 0.8/1;
+      object-fit: cover;
+    }
+
+    .service-section .scroll-indicator {
+      width: 100% !important;
+      height: 20px;
+      padding: 5px 22px !important;
+      column-gap: 16px;
+    }
+
+    .service-section .scroll-indicator li {
+      width: 5px !important;
+      min-width: 5px !important;
+      padding: 5px !important;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: var(--gray-500);
+      cursor: pointer;
+    }
+
+    .service-section .scroll-indicator li:hover {
+      box-shadow: 0 0 0 5px white, 0 0 0 6px var(--red-500);
+      background-color: var(--red-500);
+    }
+    .active_service {
+      box-shadow: 0 0 0 5px white, 0 0 0 6px var(--red-500);
+      background-color: var(--red-500) !important;
+    }
+
+    /* feature section */
+    .feature_section {
+      height: max-content;
+      padding: 50px 12px !important;
+    }
+    .feature_section h2{
+      font-size: var(--xl2-text);
+      text-align: center;
+    }
+    .feature_section h4{
+      font-size: var(--md-text);
+      text-align: center;
+    }
+
+    .feature_section .row {
+      row-gap: 10px;
+    }
+
+    .feature_section .col {
+      padding: 0 16px;
+      column-gap: 5px;
+      max-width: 92%;
+      margin: 0 auto;
+    }
+
+    .feature_section .col img {
+      width: 100px;
+    }
+
+    .feature_section .col b {
+      font-size: var(--xs-text) !important;
+    }
+
+    .feature_section .col p {
+      color: var(--gray-800);
+      font-size: var(--xs2-text);
+      font-weight: 500;
+    }
+
+    .feature_section .col:hover {
+      box-shadow: 0 0 7px var(--gray-200);
+    }
+
+    /* project section */
+    .project_section {
+      padding: 50px 20px !important;
+      background-color: white !important;
+    }
+
+    .project_section h2 {
+      font-size: var(--xl2-text);
+      text-align: center;
+    }
+
+    .project_section h4 {
+      font-size: var(--md-text);
+      text-align: center;
+    }
+
+    .project_section .row {
+      height: max-content;
+      padding: 10px 0;
+      row-gap: 16px;
+    }
+
+    .project_section .col {
+      /* padding: 16px; */
+      min-height: 100% !important;
+
+    }
+
+    .project_section .col:nth-child(2) {
+      margin: 0 !important;
+    }
+
+    .project_section .col img {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .project_section .col li {
+      background-color: white;
+      background-color: var(--gray-100);
+      height: 33%;
+      padding: 15px 20px;
+      justify-content: center !important;
+      cursor: pointer;
+      border-bottom: 2px solid var(--gray-100);
+    }
+
+    .project_section .col li p {
+      font-weight: 500;
+    }
+
+    .project_section .col li p {
+      font-size: var(--xs2-text);
+    }
+
+    .project_section .col li:hover {
+      background-color: rgb(220, 53, 69);
+    }
+
+    .active_project{
+      background-color: rgb(220, 53, 69) !important;
+    }
+    .project_section .col li:hover>b {
+      color: var(--gray-100);
+    }
+
+    .project_section .col li:hover>p {
+      color: var(--gray-100);
+    }
+
+    /* performance section */
+    .performance_section {
+      padding: 50px 20px !important;
+      background-color: rgb(239, 238, 238)
+    }
+
+    .performance_section h2 {
+      font-size: var(--xl2-text);
+      text-align: center;
+    }
+
+    .performance_section h4 {
+      font-size: var(--md-text);
+      text-align: center;
+    }
+
+    .performance_section ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 !important;
+      justify-content: center;
+      align-items: center;
+      gap: 10px !important;
+    }
+
+    .performance_section ul li {
+      background-color: var(--gray-100) !important;
+      aspect-ratio: 1/0.8;
+      width: 90%;
+      padding: 20px;
+      display: flex;
+      justify-content: center !important;
+      flex-direction: column;
+      align-items: center !important;
+      margin: 0 !important;
+      cursor: pointer;
+    }
+
+    .performance_section h5 {
+      text-align: center;
+      font-size: 40px;
+      font-family: "Nunito", sans-serif;
+      color: var(--gray-900);
+
+    }
+
+    .performance_section h6 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 17px;
+      color: var(--gray-800);
+    }
+
+    .performance_section ul svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--red-500);
+    }
+
+    .performance_section ul li:hover {
+      background-color: white !important;
+    }
+
+    /* feedback section */
+    .feedback_section {
+      padding: 50px 20px !important;
+      background-color: white;
+    }
+
+    .feedback_section h2 {
+      font-size: var(--xl2-text);
+      text-align: center;
+    }
+
+    .feedback_section h4 {
+      font-size: var(--md-text);
+      text-align: center;
+    }
+
+    .feedback_section p {
+      max-width: 400px;
+      font-weight: 500;
+      color: var(--gray-900);
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      font-size: 11px;
+    }
+
+    .feedback_section p svg {
+      width: 30px;
+      position: absolute;
+      opacity: 0.1;
+      top: -18%;
+      left: 0;
+      fill: rgb(1, 184, 184);
+    }
+
+    .feedback_section b {
+      max-width: 380px;
+      font-weight: 700;
+      font-size: var(--xs3-text) !important;
+      display: block;
+      margin: 0 auto;
+      color: var(--red-500);
+    }
+
+    .feedback_section b span {
+      font-weight: 400;
+      color: var(--gray-400);
+      font-size: 10px;
+    }
+
+    /* footer section */
+    .footer_section {
+      display: flex;
+      justify-content: center;
+      gap: 2%;
+      background-color: #f12a3a;
+      padding: 6% 15% !important;
+      margin: 0 !important;
+    }
+
+    .footer_section li {
+      width: 13%;
+      min-width: 50px;
+      display: grid;
+      place-content: center;
+    }
+
+    .footer_section img {
+      width: 100%;
+    }
+
+    /* contact use pop up */
+    .contact_us {
+      width: 96vw;
+      margin: 0 auto;
+      height: max-content;
+      z-index: 5;
+      background-color: white;
+      box-shadow: 0 0 3px var(--gray-200);
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 26px;
+    }
+
+    .contact_us h3 {
+      width: 70%;
+      font-size: var(--xl2-text);
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .contact_us fieldset {
+      width: 100%;
+      height: 60px !important;
+      position: relative;
+      border: none;
+      border-bottom: 1px solid var(--gray-400) !important;
+    }
+
+    .contact_us fieldset:has(span) {
+      height: max-content !important;
+      align-items: center;
+      border: none !important;
+      margin-top: 16px;
+    }
+
+    label {
+      position: absolute;
+      bottom: 3px;
+      width: 100%;
+      font-size: var(--xs-text);
+      font-weight: 500;
+      z-index: 0 !important;
+      color: var(--gray-500);
+
+    }
+
+    input:not([type="checkbox"]) {
+      display: block;
+      width: 100%;
+      bottom: 0 !important;
+      outline: none;
+      border: none;
+      z-index: 2;
+      position: absolute;
+      background-color: transparent;
+      order: 2;
+      color: var(--gray-600);
+      padding: 4px 6px;
+    }
+
+    .contact_us fieldset span svg {
+      width: 110%;
+      height: 100%;
+      padding: 3px;
+      fill: white;
+      border-radius: 3px;
+      box-shadow: 0 0 2px gray;
+    }
+
+    .tnc_container {
+      position: relative;
+      width: 20px !important;
+      height: 20px !important;
+      display: grid;
+      place-content: center;
+      padding: 0 !important;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .contact_us fieldset .tnc_container input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      padding: 0 !important;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .contact_us fieldset p {
+      width: 90%;
+      border: 1px solid white;
+      margin: 0;
+      font-size: var(--xs2-text);
+    }
+
+    .contact_us fieldset .tnc_container input[type="checkbox"]:checked+svg {
+      background-color: var(--red-500) !important;
+    }
+
+
+    /* active text color */
+    .project_active_text {
+      color: var(--gray-100);
+    }
+
+    .project_deactive_text {
+      color: var(--gray-800);
+    }
+
+    .project_active_img {
+      display: block !important;
+    }
+
+    /* service card hover */
+    .service_card_hover{
+      justify-content: center;
+      align-items: center;
+      padding: 16px 10px;
+      gap: 7px;
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+    .service_card_hover svg{
+      stroke: var(--gray-100);
+      fill: transparent;
+      width: 60px;
+    }
+    .service_card_hover h6{
+      font-size: var(--sm-text);
+      color: var(--gray-100);
+      margin-top: 8px;
+    }
+    .service_card_hover p{
+      font-size: var(--xs2-text);
+      color: var(--gray-200);
+      text-align: center;
+    }
+    .service_card_hover a{
+      padding: 8px 14px;
+      font-size: 10px;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--gray-100);
+      cursor: pointer;
+    }
+    .service_card_hover a svg{
+      width: 30px;
+      height: 16px;
+      stroke: #f12a3a;
+    }
+    .service_card_hover:hover{
+      opacity: 1;
+    }
+
+    @media only screen and (min-width : 576px) and (max-width : 767px) {
+
+      /* service section */
+      .service-section .col3 li {
+        min-width: 50% !important;
+        width: 50% !important;
+      }
+
+      /* performance section */
+      .performance_section {
+        height: max-content;
+        padding: 50px 80px !important;
+      }
+
+      .contact_us {
+        width: 90vw;
+        justify-content: space-between;
+      }
+
+    }
+
+    @media only screen and (min-width : 768px) and (max-width : 991px) {
+      .hero-section {
+        height: 80vh;
+        height: max-content;
+      }
+
+      .hero-section .col {
+        min-height: 100%;
+      }
+
+      .hero-section .col h2 {
+        padding-right: 5px !important;
+      }
+
+      /* service section */
+      .service-section {
+        min-height: 60vh;
+        height: max-content;
+        padding: 30px 60px !important;
+      }
+
+      .service-section .col3 li {
+        min-width: 50% !important;
+        width: 50% !important;
+      }
+
+      /* feature section */
+      .feature_section {
+        height: max-content;
+        padding: 50px 80px !important;
+      }
+
+      /* performance section */
+      .performance_section {
+        height: max-content;
+        padding: 50px 80px !important;
+      }
+
+      .performance_section ul li {
+        width: 24%;
+        padding: 5px;
+      }
+
+      /* contact us section */
+      .contact_us {
+        width: 80vw;
+        justify-content: space-between;
+      }
+
+      .contact_us fieldset:nth-child(4) {
+        width: 47%;
+      }
+
+      .contact_us fieldset:nth-child(5) {
+        width: 47%;
+      }
+    }
+
+    @media only screen and (min-width : 992px) and (max-width : 1200px) {
+      .hero-section {
+        min-height: 70vh;
+      }
+
+      .hero-section .col h2 {
+        line-height: 50px;
+      }
+
+      .hero-section .col:nth-child(2) {
+        justify-content: center;
+      }
+
+      .hero-section .col .hero-image {
+        aspect-ratio: 0.7/1;
+        object-fit: contain;
+        object-position: center;
+        height: max-content;
+        max-height: 55vh;
+      }
+
+      /* service section */
+      .service-section {
+        min-height: 90vh;
+        padding: 30px 70px !important;
+      }
+
+      .service-section .col1,
+      .service-section .col2 {
+        height: max-content;
+        min-height: 180px;
+      }
+
+      .service-section .col3 li {
+        min-width: 33% !important;
+        width: 33% !important;
+      }
+
+      /* feature section */
+      .feature_section {
+        height: max-content;
+        padding: 50px 70px !important;
+      }
+
+      /* project section */
+      .project_section {
+        height: max-content;
+        min-height: 80vh;
+        padding: 50px 70px !important;
+      }
+
+      .project_section h2 {
+        text-align: start;
+      }
+
+      .project_section h4 {
+        text-align: start;
+      }
+
+      /* performance section */
+      .performance_section {
+        height: max-content;
+        padding: 50px 70px !important;
+      }
+
+      .performance_section ul {
+        column-gap: 20px !important;
+      }
+
+      .performance_section ul li {
+        width: 200px;
+        padding: 5px;
+      }
+
+      /* contact us section */
+      .contact_us {
+        width: 70vw;
+        justify-content: space-between;
+      }
+
+      .contact_us fieldset:nth-child(4) {
+        width: 47%;
+      }
+
+      .contact_us fieldset:nth-child(5) {
+        width: 47%;
+      }
+    }
+
+    @media only screen and (min-width : 1201px) {
+      .hero-section {
+        min-height: 80vh;
+        padding: 40px 180px !important;
+        align-items: center;
+      }
+
+      .hero-section .col {
+        height: 100%;
+        overflow: hidden;
+        /* border: 1px solid red; */
+      }
+
+      h2 {
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-weight:500;
+        color: var(--gray-800);
+        line-height: 50px;
+      }
+
+      .hero-section .col:nth-child(2) {
+        justify-content: center;
+      }
+
+      .hero-section .col .hero-image {
+        aspect-ratio: 0.7/1;
+        object-fit: contain;
+        object-position: center;
+        height: max-content;
+        max-height: 70vh;
+      }
+
+      /* service section */
+      .service-section {
+        min-height: 100vh;
+        padding: 50px 180px !important;
+      }
+
+      .service-section .col {
+        height: max-content;
+
+      }
+
+      .service-section .col:nth-child(1) {
+        padding-right: 40px;
+      }
+
+      .service-section .col h4 {
+        font-size: var(--sm-text);
+      }
+
+      .service-section .col h2 {
+        font-size: var(--xl2-text);
+      }
+
+      .service-section .col3 li {
+        min-width: 24% !important;
+      }
+
+      .service-section .col3 li img {
+        min-width: 24% !important;
+        width: 24 !important;
+        aspect-ratio: 0.6/1;
+        max-height: 60vh;
+      }
+
+      /* feature section */
+      .feature_section {
+        height: max-content;
+        padding: 50px 180px !important;
+      }
+
+      /* project section */
+      .project_section {
+        background-color: var(--gray-100);
+        padding: 50px 180px !important;
+      }
+
+      /* performance section */
+      .performance_section ul {
+        column-gap: 30px !important;
+      }
+
+      .performance_section ul li {
+        width: 210px;
+        padding: 5px;
+      }
+
+      /* contact us section */
+      .contact_us {
+        width: 60vw;
+        justify-content: space-between;
+        column-gap: 0 !important;
+      }
+
+      .contact_us fieldset:nth-child(4) {
+        width: 47%;
+      }
+
+      .contact_us fieldset:nth-child(5) {
+        width: 47%;
+      }
+      .contact_us fieldset:has(span) {
+      height: max-content !important;
+    }
+  
+  
+    }
+  </style>
+  <script>
+
+  </script>
+</head>
+
+<body>
+ 
+
+  <div class="container-fluid p-0">
+    <header>
+      <div class="header-container">
+        <div class="row align-items-center">
+          <div class="col-md-6 col-9 p-4 my-auto">
+            <h3 class="text-logo">Fyler</h3>
+          </div>
+          <div class="col-md-6 col-3">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <button id="button"  class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                
+              </button>
+              
+              
+              <div class="collapse navbar-collapse p-3 my-auto" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto my-auto" id="navdrop">
+                  <a id="link"  class="nav-link text-white" href="#Home" id="#navItem1">Home</a>
+                  <a id="link"  class="nav-link text-white" href="#portfolio" id="#navItem2">Services</a>
+                  <a id="link" class="nav-link text-white" href="#WCUSection" id="#navItem3">Why Choose Us</a>
+                  <a id="link" class="nav-link text-white" href="#OPSection" id="#navItem4">Project</a>
+                  <a id="link" class="nav-link text-white" href="#EGSection" id="#navItem5">Growth</a>
+                  <a id="link" class="nav-link text-white" href="#CFSection" id="#navItem6">Feedback</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="row hero-section px-md-5 py-md-5 position-relative">
+
+      <div id="popup" onclick="close_popup()" class="position-fixed success_popup w-100 h-100 d-none bg-transparent p-3 " style="width: 100vw; height: 100vh; place-content: center; z-index: 5; top:0; left: 0;">
+        <div class="bg-light rounded-3  position-relative" style="min-width: 240px; width: auto; max-width: 400px; height: 140px; box-shadow: 0 0 3px gray; display: grid; place-content: center;" >
+        <button onclick="close_popup()" class="position-absolute z-2 text-danger" style="right: 0; top: 0;">x</button>
+          <b class="text-center text-success" style="padding: 0 20px; ">Form Submited Successfully !</b>
+        </div>
+      </div>
+
+      <div id="contact_us_form" class="position-fixed w-100 h-100 d-none contact_us_form_container"
+        style="background-color: white; width: 100%; z-index: 5; left: 0; top: 0; display: grid; place-content: center;">
+        
+        <form action="https://getform.io/f/alljylea" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" id="form" class="contact_us ">
+          <!-- <form id="form" class="contact_us "> -->
+          <h3>Talk to us</h3>
+          <button onclick="close_contact_us_form_fun()" class="btn" style="margin-left: auto;">
+            <svg style="width: 18px; fill: var(--red-500); " viewBox="0 0 384 512">
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+          </button>
+          <fieldset>
+            <input required onchange="input_handler(this)" onblur="focus_fun({id : 'email_label', focus : false, value : this.value})"
+              onfocus="focus_fun({id : 'email_label', focus : true})" type="email" name="email" id="">
+            <label id="email_label" for="email">Work email</label>
+          </fieldset>
+          <fieldset>
+            <input required onchange="input_handler(this)" onblur="focus_fun({id : 'fname_label', focus : false, value : this.value})"
+              onfocus="focus_fun({id : 'fname_label', focus : true})" type="text" name="fname" id="">
+            <label id="fname_label" for="fname">First Name</label>
+          </fieldset>
+          <fieldset>
+            <input required onchange="input_handler(this)" onblur="focus_fun({id : 'lname_label', focus : false, value : this.value})"
+              onfocus="focus_fun({id : 'lname_label', focus : true})" type="text" name="lname" id="">
+            <label id="lname_label" for="lname">Last Name</label>
+          </fieldset>
+          <fieldset class="d-flex gap-3 align-items-start">
+            <span class="tnc_container mt-1 mt-md-0" id="tnc_container">
+              <input required onchange="input_handler(this)" type="checkbox" name="tnc" id="tnc">
+              <svg viewBox="0 0 448 512">
+                <path
+                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+              </svg>
+            </span>
+            <p>I agree to the Fyle's term and conditions and provide consent to send me communication</p>
+          </fieldset>
+          <button type="submit" class="btn btn-danger w-100 py-2">Contact Us</button>
+        </form>
+
+      </div>
+
+      <div id="Home"
+        class="col col-12 order-2 info-col order-md-1 col-md-7 col-lg-6 d-flex flex-column justify-content-center pr-md-5 py-4 py-md-0">
+        <h4 class="h6 fw-bold text-center text-md-start fs-4">AWARD WINNING</h4>
+        <h2 class="mt-1 fw-bold fs-1 text-center text-md-start">DIGITAL MARKETING AGENCY</h2>
+        <p class="mt-2 text-center text-md-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+          repellat nihil cupiditate ducimus quisquam perspiciatis error provident fugiat hic expedita reprehend</p>
+        <button onclick="show_contact_us_form_fun()" class="mt-3 mx-auto mx-md-0 rounded-1 btn btn-danger">Contact Us</button>
+      </div>
+
+      <div
+        class="col col-12 order-1 img-col order-md-2 col-md-5 col-lg-6 d-flex flex-column justify-content-center items-center px-md-5">
+        <img src="./images/hero-image.jpeg" class="hero-image" alt="">
+      </div>
+    </div>
+
+    <div class="row service-section px-md-5 py-3 py-md-5">
+      <div id="portfolio"
+        class=" col1 col col-12 col-md-6 col-xl-5 col-lg-4 col d-flex flex-column justify-content-center pr-md-5 pb-2 pb-md-4 py-4 py-md-2">
+        <h4 class="h6 fw-bold text-center text-md-start">WHAT WE DO</h4>
+        <h2 class="mt-0 fw-bold text-center text-md-start" style="line-height: 36px;">SERVICES PROVIDE FOR YOU</h2>
+      </div>
+      <div class="col2 col col-12 col-md-6 col-xl-7 col-lg-8">
+        <p class=" text-center text-md-start py-md-3 ps-md-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Soluta
+          repellat nihil cupiditate ducimus quisquam perspiciatis error provident fugiat hic expedita reprehend. Lorem
+          ipsum, dolor sit.</p>
+      </div>
+
+      <ul id="scroll-images"
+        class="col3 col col-12 d-flex flex-row w-100 max-w-100 mt-4 mt-sm-3 mt-md-2 mt-l1-2 mt-xl-0"
+        style="overflow-x: auto;">
+        <li class="position-relative w-100 rounded-2">
+          <div class="service_card_hover w-100 h-100 position-absolute bg-danger z-20 d-flex flex-column">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+              
+            <h6>WEB DEVELOPEMENT</h6>
+              <P>Morbi sed lacus nec ricus finibus feugiated frementum nibh. Phellentesque</P>
+              <a href="https://fylehq.com" target="_blank" class=" text-danger">
+                READ MORE
+                <svg viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                
+              </a>
+          </div>
+          <img class="w-100 rounded-2" src="./images/scroll_img1.jpg" alt="">
+        </li>
+        <li class="position-relative w-100 rounded-2">
+          <div class="service_card_hover w-100 h-100 position-absolute bg-danger z-20 d-flex flex-column">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+              
+            <h6>WEB DEVELOPEMENT</h6>
+              <P>Morbi sed lacus nec ricus finibus feugiated frementum nibh. Phellentesque</P>
+              <a href="https://fylehq.com" target="_blank" class=" text-danger">
+                READ MORE
+                <svg viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                
+              </a>
+          </div>
+          <img class="w-100 rounded-2" src="./images/scroll_img2.jpg" alt="">
+        </li>
+        <li class="position-relative w-100 rounded-2">
+          <div class="service_card_hover w-100 h-100 position-absolute bg-danger z-20 d-flex flex-column">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+              
+            <h6>WEB DEVELOPEMENT</h6>
+              <P>Morbi sed lacus nec ricus finibus feugiated frementum nibh. Phellentesque</P>
+              <a href="https://fylehq.com" target="_blank" class=" text-danger">
+                READ MORE
+                <svg viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                
+              </a>
+          </div>
+          <img class="w-100 rounded-2" src="./images/scroll_img1.jpg" alt="">
+        </li>
+        <li class="position-relative w-100 rounded-2">
+          <div class="service_card_hover w-100 h-100 position-absolute bg-danger z-20 d-flex flex-column">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+              
+            <h6>WEB DEVELOPEMENT</h6>
+              <P>Morbi sed lacus nec ricus finibus feugiated frementum nibh. Phellentesque</P>
+              <a href="https://fylehq.com" target="_blank" class=" text-danger">
+                READ MORE
+                <svg viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                
+              </a>
+          </div>
+          <img class="w-100 rounded-2" src="./images/scroll_img4.jpg" alt="">
+        </li>
+
+        <li class="position-relative w-100 rounded-2">
+          <div class="service_card_hover w-100 h-100 position-absolute bg-danger z-20 d-flex flex-column">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+              
+            <h6>WEB DEVELOPEMENT</h6>
+              <P>Morbi sed lacus nec ricus finibus feugiated frementum nibh. Phellentesque</P>
+              <a href="https://fylehq.com" target="_blank" class=" text-danger">
+                READ MORE
+                <svg viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                
+              </a>
+          </div>
+          <img class="w-100 rounded-2" src="./images/scroll_img1.jpg" alt="">
+        </li>
+        <li class="position-relative w-100 rounded-2">
+          <div class="service_card_hover w-100 h-100 position-absolute bg-danger z-20 d-flex flex-column">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+              
+            <h6>WEB DEVELOPEMENT</h6>
+              <P>Morbi sed lacus nec ricus finibus feugiated frementum nibh. Phellentesque</P>
+              <a href="https://fylehq.com" target="_blank" class=" text-danger">
+                READ MORE
+                <svg viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                
+              </a>
+          </div>
+          <img class="w-100 rounded-2" src="./images/scroll_img2.jpg" alt="">
+        </li>
+        <li class="position-relative w-100 rounded-2">
+          <div class="service_card_hover w-100 h-100 position-absolute bg-danger z-20 d-flex flex-column">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+              
+            <h6>WEB DEVELOPEMENT</h6>
+              <P>Morbi sed lacus nec ricus finibus feugiated frementum nibh. Phellentesque</P>
+              <a href="https://fylehq.com" target="_blank" class=" text-danger">
+                READ MORE
+                <svg viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                
+              </a>
+          </div>
+          <img class="w-100 rounded-2" src="./images/scroll_img1.jpg" alt="">
+        </li>
+        <li class="position-relative w-100 rounded-2">
+          <div class="service_card_hover w-100 h-100 position-absolute bg-danger z-20 d-flex flex-column">
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+              
+            <h6>WEB DEVELOPEMENT</h6>
+              <P>Morbi sed lacus nec ricus finibus feugiated frementum nibh. Phellentesque</P>
+              <a href="https://fylehq.com" target="_blank" class=" text-danger">
+                READ MORE
+                <svg viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                
+              </a>
+          </div>
+          <img class="w-100 rounded-2" src="./images/scroll_img4.jpg" alt="">
+        </li>
+      </ul>
+      <ul id="scroll-indicator" class="w-max d-flex scroll-indicator col4" style="width: max-content;">
+        <!-- <li class=""></li>
+        <li class=""></li>
+        <li class=""></li> -->
+      </ul>
+
+    </div>
+
+    <div id="WCUSection"
+      class="d-flex flex-column feature_section px-md-5 py-3 py-md-5">
+
+      <h4 class="h6 fw-bold text-center">WHY CHOOSE US</h4>
+      <h2 class="mt-0 fw-bold text-center" style="line-height: 36px;">WHY WE ARE BEST</h2>
+
+      <div class="row mt-5">
+        <div class="col col-12 col-md-6 col-lg-4 col-xl-3 d-felx flex-column py-3">
+          <img src="./images/feature_logo1.jpg" alt="">
+          <b class="p-0 m-0 d-block w-100 mt-1 px-3">Clarified Vision & Target</b>
+          <p class="mt-2 px-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nemo natus accusamus
+            voluptas iure eos.</p>
+        </div>
+
+        <div class="col col-12 col-md-6 col-lg-4 col-xl-3 d-felx flex-column py-3">
+          <img src="./images/feature_logo2.jpg" alt="">
+          <b class="p-0 m-0 d-block w-100 mt-1 px-3">High Performance</b>
+          <p class="mt-2 px-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nemo natus accusamus
+            voluptas iure eos.</p>
+        </div>
+
+        <div class="col col-12 col-md-6 col-lg-4 col-xl-3 d-felx flex-column py-3">
+          <img src="./images/feature_logo3.jpg" alt="">
+          <b class="p-0 m-0 d-block w-100 mt-1 px-3">Maintain Security</b>
+          <p class="mt-2 px-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nemo natus accusamus
+            voluptas iure eos.</p>
+        </div>
+
+        <div class="col col-12 col-md-6 col-lg-4 col-xl-3 d-felx flex-column py-3">
+          <img src="./images/feature_logo4.jpg" alt="">
+          <b class="p-0 m-0 d-block w-100 mt-1 px-3">Better Strategy & Quality</b>
+          <p class="mt-2 px-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nemo natus accusamus
+            voluptas iure eos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="OPSection" class="d-flex flex-column py-5 py-md-5 project_section">
+      <h4 class="h6 fw-bold ">OUR PROJECTS</h4>
+      <h2 class="mt-0 fw-bold" style="line-height: 36px;">WHY WE ARE BEST</h2>
+
+      <div class="row mt-3">
+        <div class="col col-12 col-lg-8">
+          <img class="project_active_img" src="./images/projects_img1.jpg" alt="">
+          <img src="./images/project_img2.jpg" alt="">
+          <img src="./images/projects_img3.jpg" alt="">
+        </div>
+        <ul class="project_changing_btns col col-12 col-lg-4">
+          <li class="d-flex flex-column active_project">
+            <b class="project_active_text">Jenderless Kei - Japan's Hot</b>
+            <p class="mt-2 project_active_text">Set to launch on the manufactur's A330neo aircraft in 2017, it's
+              offering lots of</p>
+          </li>
+          <li class="d-flex flex-column">
+            <b class="project_deactive_text">Jenderless Kei - Japan's Hot</b>
+            <p class="mt-2 project_deactive_text">Set to launch on the manufactur's A330neo aircraft in 2017, it's
+              offering lots of</p>
+          </li>
+          <li class="d-flex flex-column">
+            <b class="project_deactive_text">Jenderless Kei - Japan's Hot</b>
+            <p class="mt-2 project_deactive_text">Set to launch on the manufactur's A330neo aircraft in 2017, it's
+              offering lots of</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="EGSection" class="performance_section d-flex flex-column py-5 py-md-5">
+      <h4 class="h6 fw-bold ">EXPERTS GROWTH</h4>
+      <h2 class="mt-0 fw-bold" style="line-height: 36px;">OURCOMPANY GROWTH</h2>
+
+      <ul class="mt-4">
+
+        <li class="">
+          <svg viewBox="0 0 512 512">
+            <path
+              d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+          </svg>
+          <h5 class="d-block w-100 mt-2">199 +</h5>
+          <h6 class="mt-2">Satisfied Customers</h6>
+        </li>
+
+        <li class="">
+          <svg viewBox="0 0 512 512">
+            <path
+              d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
+          </svg>
+          <h5 class="d-block w-100 mt-2">1591 +</h5>
+          <h6 class="mt-2">Satisfied Customers</h6>
+        </li>
+
+        <li class="">
+          <svg viewBox="0 0 512 512">
+            <path
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+          </svg>
+          <h5 class="d-block w-100 mt-2">283 +</h5>
+          <h6 class="mt-2">Satisfied Customers</h6>
+        </li>
+
+        <li class="">
+          <svg viewBox="0 0 512 512">
+            <path
+              d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" />
+          </svg>
+          <h5 class="d-block w-100 mt-2">75 +</h5>
+          <h6 class="mt-2">Satisfied Customers</h6>
+        </li>
+
+      </ul>
+    </div>
+
+    <div id="CFSection" class="feedback_section flex flex-column justify-center py-5 py-md-5">
+      <h4 class="h6 fw-bold text-center">CLIENT'S FEEDBACK</h4>
+      <h2 class="mt-0 fw-bold text-center mb-2" style="line-height: 36px;">PEOPLE SAY'S ABOUT US !</h2>
+
+      <p class="mt-4 lg:mt-5">
+        <svg class="" viewBox="0 0 448 512">
+          <path
+            d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z" />
+        </svg>
+        Jannat Tumpa the standurd chunk of Lorem ipsum used since the 1500s is reproduced below for those interested.
+        Sections bonorum rt malorum original
+      </p>
+      <b class="mt-3">
+        JANNAT TUMPA - <span>COO AMERIMAR ENTERPRISES, INC.</span></b>
+    </div>
+
+    <ul class="footer_section">
+      <li class="w-max">
+        <img src="./images/brands1.jpg" alt="">
+      </li>
+      <li class="w-max">
+        <img src="./images/brands2.jpg" alt="">
+      </li>
+      <li class="w-max">
+        <img src="./images/brands3.jpg" alt="">
+      </li>
+      <li class="w-max">
+        <img src="./images/brands4.jpg" alt="">
+      </li>
+      <li class="w-max">
+        <img src="./images/brands5.jpg" alt="">
+      </li>
+      <li class="w-max">
+        <img src="./images/brands6.jpg" alt="">
+      </li>
+    </ul>
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    // input focus
+    const focus_fun = ({ id, focus, value = "" }) => {
+      if (focus) {
+        document.getElementById(id).style.position = "relative"
+      }
+      else {
+        if (value.length === 0) {
+          document.getElementById(id).style.position = "absolute"
+        }
+      }
+    }
+
+    // show contact us form
+    const show_contact_us_form_fun = () => {
+      document.getElementById("contact_us_form").classList.remove("d-none")
+    }
+
+    // hide contact us form
+    const close_contact_us_form_fun = () => {
+      document.getElementById("contact_us_form").classList.add("d-none")
+    }
+
+    // close popup
+    const close_popup = () => {
+      document.getElementById("popup").classList.replace("d-grid", "d-none")
+    }
+
+    // open popup
+    const open_popup = () => {
+      document.getElementById("popup").classList.replace("d-none", "d-grid")
+    }
+
+    // project changing btns and fun
+    const prjct_changing_btns = document.querySelectorAll(".project_changing_btns li")
+    const project_img = document.querySelectorAll(".project_section img")
+    prjct_changing_btns.forEach((btn, i) => {
+
+      btn.addEventListener("click", function () {
+        prjct_changing_btns.forEach(v => v.classList.remove("active_project"))
+        prjct_changing_btns.forEach(v => v.children[0].classList.remove("project_active_text"))
+        prjct_changing_btns.forEach(v => v.children[1].classList.remove("project_active_text"))
+        prjct_changing_btns.forEach(v => v.children[0].style.color = "")
+        prjct_changing_btns.forEach(v => v.children[1].style.color = "")
+        project_img.forEach(v => v.classList.remove("project_active_img"))
+
+        btn.classList.add("active_project")
+        btn.children[0].style.color = "white"
+        btn.children[1].style.color = "white"
+        project_img[i].classList.add("project_active_img")
+
+      })
+    })
+
+    // service scroller
+    const scroll_images_container = document.getElementById("scroll-images");
+     let totalWidthSizeOfImages = scroll_images_container.children.length * (scroll_images_container.children[0].clientWidth + 12);
+    let widthOfImage = scroll_images_container.children[0].clientWidth + 12;
+    
+    let totalFrame = 0;
+    totalFrame = totalWidthSizeOfImages / widthOfImage;
+
+    let totalFramseOfElements = 0;
+
+    totalFramseOfElements = Math.ceil(totalFrame)
+
+    let innerWidth = window.innerWidth;
+   
+    if(innerWidth < 576 ){
+      totalFramseOfElements = Math.ceil(totalFrame / 1 )
+    }
+    if(innerWidth > 575 && innerWidth <= 992 ){
+      totalFramseOfElements = Math.ceil(totalFrame / 2 )
+    }
+    if(innerWidth > 992 && innerWidth < 1200 ){
+      totalFramseOfElements = Math.ceil(totalFrame / 3 )
+    }
+    if(innerWidth >= 1200){
+      totalFramseOfElements = Math.ceil(totalFrame / 4 )
+    }
+
+    const scroll_indicator_container = document.getElementById("scroll-indicator");
+
+    Array.from({ length: totalFramseOfElements }, (v, i) => {
+      const li = document.createElement("li");
+
+      scroll_indicator_container.appendChild(li);
+      li.classList.remove("active_service");
+      scroll_indicator_container.children[0].classList.add("active_service")
+
+      li.onclick = function(e){
+        for(let x = 0; scroll_indicator_container.children.length > x; x++){
+          scroll_indicator_container.children[x].classList.remove("active_service")
+        }
+
+        let left = ((scroll_images_container.clientWidth - 10) * i)
+        scroll_images_container.scrollLeft = left;
+       
+        e.currentTarget.classList.add("active_service")
+      }
+
+    })
+
+    // const form = {
+    //   fname : "",
+    //   lname : "",
+    //   email : "",
+    //   tnc : "no"
+    // }
+    // form submission
+    // const form_submit_fun = (e) => {
+    
+    //     const url = "https://getform.io/f/alljylea";
+    //      const res = fetch(url, {
+    //       method : "POST",
+    //       body : JSON.stringify(form),
+    //       headers : {
+    //         "Accept" : "application/json"
+    //       }
+    //     }).then((res)=>{
+    //       if(res.ok){
+    //         console.log("res ", res)
+    //       }
+    //       else{
+    //         console.log("err ", res)
+    //       }
+    //     })
+    
+    // };
+
+
+    const formData = document.getElementById("form");
+
+    // formData.addEventListener("submit", (e)=>{
+    //   e.preventDefault()
+    //   let x = e.target;
+    //   const form = new FormData(x);
+
+    //   x.querySelectorAll('[name]').forEach((v)=>{
+    //     // let value = formData.get(v.name)
+    //     console.log("field ", v.name)
+    //     console.log("values ", v.value)
+    //   })
+    //   console.log("form data " )
+    // });
+
+    form.addEventListener("submit", (e)=>{
+      e.preventDefault();
+
+      const data = new FormData(e.target);
+
+      console.log("data ", data)
+        const url = "https://getform.io/f/alljylea";
+
+      fetch(url, {
+        method : "POST",
+        body : data,
+        headers : {
+          "Accept" : "application/json"
+        }
+      }).then((res)=>{
+        if(!res.ok){
+          console.log("err ", res)
+          close_contact_us_form_fun()
+          open_popup()
+        }
+        else{
+          console.log("response ", res)
+        }
+      })
+    })
+
+
+    function input_handler(e){
+      const {name, value} = e;
+
+      if(name === "tnc"){
+        form.tnc = e.checked ? "yes" : "no"      
+      }
+      else{
+        // form[name] = value
+      }
+    }
+
+  </script>
+</body>
+
+</html>
